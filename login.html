@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Casino À La Stephen</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <div class="header">
+        <div class="logo-section">
+            <div class="logo-circle">
+                <img src="images/logo.jpg" alt="Casino Logo" class="site-logo">
+            </div>
+            <div class="site-name">Casino À La Stephen</div>
+        </div>
+        <div class="header-buttons">
+            <button class="btn btn-login" onclick="openModal('login')">Login</button>
+            <button class="btn btn-register" onclick="openModal('register')">Register</button>
+            <div class="notification-icon">🔔</div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Welcome Section -->
+        <div class="welcome-section">
+            <h1 class="welcome-title">Welcome to Casino À La Stephen</h1>
+            <div class="warning-box">
+                <div class="warning-icon">✋</div>
+                <div class="warning-text">
+                    Caution: Gambling involves financial risk. This website is intended for users 21 years old and above. Please gamble responsibly. If you feel gaming have a gambling addiction, please seek help immediately.
+                </div>
+            </div>
+        </div>
+
+        <!-- Hot Games Section -->
+        <div class="games-section">
+            <h2 class="section-title">HOT GAMES !!!</h2>
+            <div class="games-grid">
+                <div class="game-card" onclick="checkLogin()">
+                    <img class="game-image" src="images/ace.webp" alt="Super Ace">
+                    <div class="game-name">Super Ace</div>
+                </div>
+                <div class="game-card" onclick="checkLogin()">
+                    <img class="game-image" src="images/gates.jpg" alt="Gates of Olympus 1000">
+                    <div class="game-name">Gates of Olympus 1000</div>
+                </div>
+                <div class="game-card" onclick="checkLogin()">
+                    <img class="game-image" src="images/color.webp" alt="Color Game">
+                    <div class="game-name">Color Game</div>
+                </div>
+                <div class="game-card" onclick="checkLogin()">
+                    <img class="game-image" src="images/starlight.png" alt="Starlight Princess">
+                    <div class="game-name">Starlight Princess</div>
+                </div>
+                <div class="game-card" onclick="checkLogin()">
+                    <img class="game-image" src="images/pinata.jpg" alt="Pinata Wins">
+                    <div class="game-name">Pinata Wins</div>
+                </div>
+                <div class="game-card" onclick="checkLogin()">
+                    <img class="game-image" src="images/sweet.jpeg" alt="Sweet Bonanza">
+                    <div class="game-name">Sweet Bonanza</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Login/Register Modal -->
+    <div id="authModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            
+            <!-- Login Form -->
+            <div id="loginSection" class="auth-section">
+                <h2 class="modal-title">Member Login</h2>
+                <form id="loginForm">
+                    <div class="form-group">
+                        <label for="loginUsername">Username</label>
+                        <input type="text" id="loginUsername" placeholder="Enter your username" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="loginPassword">Password</label>
+                        <input type="password" id="loginPassword" placeholder="Enter your password" required>
+                    </div>
+
+                    <div class="error-message" id="loginError"></div>
+
+                    <button type="submit" class="submit-btn">Login</button>
+                </form>
+
+                <div class="switch-auth">
+                    Don't have an account? <a href="javascript:void(0)" onclick="switchToRegister()">Register here</a>
+                </div>
+
+                <div class="demo-info">
+                    Demo: <strong>player</strong> / <strong>casino123</strong>
+                </div>
+            </div>
+
+            <!-- Register Form -->
+            <div id="registerSection" class="auth-section" style="display: none;">
+                <h2 class="modal-title">Create Account</h2>
+                <form id="registerForm">
+                    <div class="form-group">
+                        <label for="regUsername">Username</label>
+                        <input type="text" id="regUsername" placeholder="Choose a username" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="regEmail">Email</label>
+                        <input type="email" id="regEmail" placeholder="Enter your email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="regPassword">Password</label>
+                        <input type="password" id="regPassword" placeholder="Choose a password" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="regConfirmPassword">Confirm Password</label>
+                        <input type="password" id="regConfirmPassword" placeholder="Confirm your password" required>
+                    </div>
+
+                    <div class="error-message" id="registerError"></div>
+                    <div class="success-message" id="registerSuccess"></div>
+
+                    <button type="submit" class="submit-btn">Register</button>
+                </form>
+
+                <div class="switch-auth">
+                    Already have an account? <a href="javascript:void(0)" onclick="switchToLogin()">Login here</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

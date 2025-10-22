@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Casino À La Stephen - Profile</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <div class="header">
+        <div class="logo-section">
+            <div class="logo-circle">
+                <img src="images/logo.jpg" alt="Casino Logo" class="site-logo">
+            </div>
+            <div class="site-name">CASINO À LA STEPHEN</div>
+        </div>
+    </div>
+
+    <div class="main-container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <a href="index.html" class="sidebar-item">
+                <span class="icon">🏠</span>
+                <span class="text">Home</span>
+            </a>
+            <a href="game.html" class="sidebar-item">
+                <span class="icon">🎮</span>
+                <span class="text">My Games</span>
+            </a>
+            <a href="profile.html" class="sidebar-item">
+                <span class="icon">👤</span>
+                <span class="text">Profile</span>
+            </a>
+            <div class="balance-card">
+                <div class="balance-icon">💳</div>
+                <div class="balance-info">
+                    <div class="balance-label">Balance :</div>
+                    <div class="balance-amount" id="sidebarBalance">Php 1,000,000</div>
+                </div>
+            </div>
+            <div class="sidebar-footer">
+                @casinoalastephen
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <div class="profile-container">
+                <!-- Left Section - Profile Info -->
+                <div class="profile-left">
+                    <div class="profile-avatar">
+                        <!-- Use user.png if available, otherwise fall back to logo.jpg -->
+                        <img id="profileAvatar" src="images/user.png" alt="User Avatar" class="profile-avatar-img" onerror="this.onerror=null;this.src='images/logo.jpg'">
+                    </div>
+                    
+                    <div class="player-info">
+                        <h2 class="player-name">Player</h2>
+                        <p class="player-detail">Birthday: xx/xx/xxxx</p>
+                        <p class="player-detail">Member since: January 2025</p>
+                    </div>
+
+                    <div class="account-info">
+                        <h3 class="section-title">Account Information:</h3>
+                        <div class="info-item">
+                            <span class="info-label">Username:</span>
+                            <span class="info-value" id="profileUsername">RovVaris123</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Email:</span>
+                            <span class="info-value" id="profileEmail">username@example.com</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Balance:</span>
+                            <span class="info-value balance-highlight" id="profileBalance">Php1,000,000</span>
+                        </div>
+                    </div>
+
+                    <div class="action-buttons">
+                        <button class="btn-edit" onclick="editProfile()">Edit Profile</button>
+                        <button class="btn-logout" onclick="logout()">Logout</button>
+                    </div>
+                </div>
+
+                <!-- Right Section - Activity -->
+                <div class="profile-right">
+                    <div class="activity-section">
+                        <h3 class="activity-title">Recent Activity:</h3>
+                        <div class="activity-item">
+                            <span class="activity-text">Played: <span class="game-name">Gates of Olympus</span> (<span class="win-text">Won Php 5,000</span>)</span>
+                        </div>
+                        <div class="activity-item">
+                            <span class="activity-text">Played: <span class="game-name">Pinata Wins</span> (<span class="loss-text">Lost Php 2,000</span>)</span>
+                        </div>
+                    </div>
+
+                    <div class="deposit-section">
+                        <h3 class="deposit-title">Deposit:</h3>
+                        <p class="deposit-amount">Php 10,000</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+    <script>
+        (function(){
+            const current = window.location.pathname.split('/').pop() || 'index.html';
+            document.querySelectorAll('.sidebar-item').forEach(a => {
+                if (a.getAttribute('href') === current) {
+                    a.classList.add('active');
+                } else {
+                    a.classList.remove('active');
+                }
+            });
+        })();
+    </script>
+</body>
+</html>

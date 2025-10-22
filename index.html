@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Casino À La Stephen - Home</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* roulette background only for index page */
+        body::before {
+            content: '';
+            position: fixed;
+            inset: 0;
+            background-image: url('images/roullete.jpg');
+            background-size: 90% auto;
+            background-repeat: no-repeat;
+            background-position: center top;
+            opacity: 0.10;
+            pointer-events: none;
+            z-index: 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <div class="header">
+        <div class="logo-section">
+            <div class="logo-circle">
+                <img src="images/logo.jpg" alt="Casino Logo" class="site-logo">
+            </div>
+            <div class="site-name">Casino À La Stephen</div>
+        </div>
+        <div class="header-buttons">
+            <button class="btn btn-deposit">Deposit</button>
+            <button class="btn btn-withdraw">Withdraw</button>
+            <div class="notification-icon">🔔</div>
+        </div>
+    </div>
+
+    <div class="main-container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <a href="index.html" class="sidebar-item">
+                <span class="icon">🏠</span>
+                <span class="text">Home</span>
+            </a>
+            <a href="game.html" class="sidebar-item">
+                <span class="icon">🎮</span>
+                <span class="text">My Games</span>
+            </a>
+            <a href="profile.html" class="sidebar-item">
+                <span class="icon">👤</span>
+                <span class="text">Profile</span>
+            </a>
+            <div class="balance-card">
+                <div class="balance-icon">💳</div>
+                <div class="balance-info">
+                    <div class="balance-label">Balance :</div>
+                    <div class="balance-amount">Php 1,000,000</div>
+                </div>
+            </div>
+            <div class="sidebar-footer">
+                @casinoalastephen
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <!-- Welcome Section -->
+            <div class="welcome-section">
+                <h1 class="welcome-title">WELCOME TO CASINO À LA STEPHEN</h1>
+                <div class="warning-box">
+                    <div class="warning-icon">✋</div>
+                    <div class="warning-text">
+                        "Caution: Gambling involves financial risk. This website is intended for users 21 years old and above. Please gamble responsibly. If you feel you may have a gambling problem, seek professional help immediately."
+                    </div>
+                </div>
+                <p class="tagline">Your ultimate online casino experience – play, win, and enjoy all in one place!</p>
+            </div>
+
+            <!-- Featured Games Section -->
+            <div class="featured-section">
+                <h2 class="section-title">Featured Games Section</h2>
+                <h3 class="section-subtitle">"Top Games This Week"</h3>
+                <ul class="featured-list">
+                    <li><span class="game-highlight">Gates of Olympus</span> – Test your luck with free spins!</li>
+                    <li><span class="game-highlight">Color Game</span> – Outsmart the dealer.</li>
+                    <li><span class="game-highlight">Super Ace</span> – Where the deck of cards never stops rolling.</li>
+                </ul>
+            </div>
+
+            <!-- Why Choose Us Section -->
+            <div class="why-choose-section">
+                <h2 class="section-title">Why Choose Us?</h2>
+                <h3 class="section-subtitle">"We Provide The Best Gaming Experience!"</h3>
+                <ul class="features-list">
+                    <li>Huge collection of games</li>
+                    <li>Easy deposit & withdrawal system</li>
+                    <li>Safe & secure platform</li>
+                    <li>Daily rewards and bonuses</li>
+                </ul>
+                <button class="play-now-btn">PLAY NOW!</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        // mark active sidebar item
+        (function(){
+            const current = window.location.pathname.split('/').pop() || 'index.html';
+            document.querySelectorAll('.sidebar-item').forEach(a => {
+                if (a.getAttribute('href') === current) {
+                    a.classList.add('active');
+                } else {
+                    a.classList.remove('active');
+                }
+            });
+        })();
+    </script>
+</body>
+</html>

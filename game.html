@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Casino À La Stephen - Games</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <div class="header">
+        <div class="logo-section">
+            <div class="logo-circle">
+              <img src="images/logo.jpg" alt="Casino Logo" class="site-logo">
+            </div>
+            <div class="site-name">CASINO À LA STEPHEN</div>
+        </div>
+        <div class="header-buttons">
+            <button class="btn btn-deposit">Deposit</button>
+            <button class="btn btn-withdraw">Withdraw</button>
+            <div class="notification-icon">🔔</div>
+        </div>
+    </div>
+
+    <div class="main-container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <a href="index.html" class="sidebar-item">
+                <span class="icon">🏠</span>
+                <span class="text">Home</span>
+            </a>
+            <a href="games.html" class="sidebar-item active">
+                <span class="icon">🎮</span>
+                <span class="text">My Games</span>
+            </a>
+            <a href="profile.html" class="sidebar-item">
+                <span class="icon">👤</span>
+                <span class="text">Profile</span>
+            </a>
+            <div class="balance-card">
+                <div class="balance-icon">💳</div>
+                <div class="balance-info">
+                    <div class="balance-label">Balance :</div>
+                    <div class="balance-amount">Php 1,000,000</div>
+                </div>
+            </div>
+            <div class="sidebar-footer">
+                @casinoalastephen
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <h1 class="games-title">GAMES FOR YOU !!!🔥</h1>
+
+            <div class="games-grid">
+                <!-- Super Ace -->
+                <div class="game-item" onclick="playGame('super-ace')">
+                    <div class="game-card">
+                        <img class="game-image" src="images/ace.webp" alt="Super Ace">
+                    </div>
+                    <h3 class="game-name">Super Ace</h3>
+                </div>
+
+                <!-- Gates of Olympus -->
+                <div class="game-item" onclick="playGame('gates-olympus')">
+                    <div class="game-card">
+                        <img class="game-image" src="images/gates.jpg" alt="Gates of Olympus 1000">
+                    </div>
+                    <h3 class="game-name">Gates of Olympus 1000</h3>
+                </div>
+
+                <!-- Color Game -->
+                <div class="game-item" onclick="playGame('color-game')">
+                    <div class="game-card">
+                       <img class="game-image" src="images/color.webp" alt="Color Game">
+                    </div>
+                    <h3 class="game-name">Color Game</h3>
+                </div>
+
+                <!-- Starlight Princess -->
+                <div class="game-item" onclick="playGame('starlight-princess')">
+                    <div class="game-card">
+                       <img class="game-image" src="images/starlight.png" alt="Starlight Princess">
+                    </div>
+                    <h3 class="game-name">Starlight Princess</h3>
+                </div>
+
+                <!-- Pinata Wins -->
+                <div class="game-item" onclick="playGame('pinata-wins')">
+                    <div class="game-card">
+                        <img class="game-image" src="images/pinata.jpg" alt="Pinata Wins">
+                    </div>
+                    <h3 class="game-name">Pinata Wins</h3>
+                </div>
+
+                <!-- Sweet Bonanza -->
+                <div class="game-item" onclick="playGame('sweet-bonanza')">
+                    <div class="game-card">
+                        <img class="game-image" src="images/sweet.jpeg" alt="Sweet Bonanza">
+                    </div>
+                    <h3 class="game-name">Sweet Bonanza</h3>
+                </div>
+            </div>
+
+            <div class="coming-soon">
+                <p>More Games Coming Soon!!</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Game Modal -->
+    <div id="gameModal" class="game-modal">
+        <div class="game-modal-content">
+            <span class="close-modal" onclick="closeGameModal()">&times;</span>
+            <img id="gameImage" src="" alt="Game" class="modal-game-image">
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
